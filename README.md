@@ -12,6 +12,10 @@ Hangman's resurrection
 
 The original Hangman game, but with a little twist.
 
+Project by: Matthijs Klijn
+Studentnumber: 10447822
+Mail: matthijsthoolen@hotmail.com
+
 <a id="hangman"></a>Hangman
 ---------------------------
 
