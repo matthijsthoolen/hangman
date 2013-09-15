@@ -97,84 +97,84 @@ wont be described here.
 
 Class: Hangman
 --------------
-<i>Input: difficulty, length, lifes</i>
+<i>Input: difficulty, length, lifes</i><br>
 The hangman class will keep track of the game and keep all the variables like score, lifes etc. This will be one of the only
 classes I will 'speak' to directly. The other classes will be started from within this class. 
 
-<b>Method: Hangman</b>
+<b>Method: Hangman</b><br>
 <i>Private method</i>
 Set the static vars which we will use in the hangman game. These vars are given in the initialization of the class or can be 
 derived from the given variables. The word will be generated with the special class for generating. 
 
-<b>Method: checkLetterGuess</b>
+<b>Method: checkLetterGuess</b><br>
 <i>Input: letter
 Output: boolean</i>
 Check the users guess if its correct and call all the other necessary methods for handling the guess
 
-<b>Method: checkWordGuess</b>
+<b>Method: checkWordGuess</b><br>
 <i>Input: word
 Output: Boolean</i>
 Check if the user guessed the correct word and start all the other necessary methods.
 
-<b>Method: getLetterLocations</b>
+<b>Method: getLetterLocations</b><br>
 <i>Private method
 Input: letter
 Output: array with letter places</i>
 Get the location of the guessed letters.
 
-<b>Method: drawScreen</b>
+<b>Method: drawScreen</b><br>
 <i>Private method</i>
 Send all the necessary information to the screen drawing class.
 
-<b>Method: resetGame</b>
+<b>Method: resetGame</b><br>
 <i>Input: none
 Output: none</b>
 Restart the game
 
-<b>Method: EndGame</b>
+<b>Method: EndGame</b><br>
 <i>Private method</i>
 If the game ends of the user resets the game, this class will handle it. It will save the score and redirect the user to the end 
 screen. 
 
 Class: Screen drawing
 ---------------------
-<i>Input: almost all vars from Hangman</i>
+<i>Input: almost all vars from Hangman</i><br>
 
-<b>Method: ScreenDrawing</i>
+<b>Method: ScreenDrawing</b><br>
 Set the screen on the start position
 
-<b>Method: wrongGuess</b>
+<b>Method: wrongGuess</b><br>
 <i>Input: Array with information</i>
 Draw some more of the gallow, and change all the screen information.
 
-<b>Method: correctGuess</b>
+<b>Method: correctGuess</b><br>
 <i>Input: array with information</i>
 Add a letter to the word and update all other information on the screen.
 
 Class: generate word
 --------------------
-<i>Input: difficulty, length.</i>
+<i>Input: difficulty, length.</i><br>
 This class can generate the word depending on the difficulty it will get a word from the database or from the dictionary. 
 
-<b>Method: generate word</b>
+<b>Method: generate word</b><br>
 <i>Private method</i>
 The initializer for the class. This class will set the variables used by the other methods in a static var. It will set these
 vars depending on the difficulty, and if the difficulty is custom it will use the length. When thats done it will call the dictionary
 method or the database method depending on the difficulty.
 
-<b>Method: dictionaryGenerate</b>
+<b>Method: dictionaryGenerate</b><br>
 <i>Private method</i>
 Generate a word with the dictionary. And check if its used already recently with the checkHistory method, try until we found a new word. 
 
-<b>Method: databaseGenerate</b>
+<b>Method: databaseGenerate</b><br>
 <i>Private method</i>
 Generate a word from the database and check if it was used recently.
 
-<b>Method: CheckHistory</b>
+<b>Method: CheckHistory</b><br>
 <i>Private method</i>
 Check in the database if the word has been used recently.
 
-<b>Method: setHistory</b>
+<b>Method: setHistory</b><br>
 <i>Private method</i>
 Set the word in the history so it wont be used in the upcoming matches.
 
@@ -194,7 +194,7 @@ and a description but I will just give a short example for each coding language.
 
 <a id="java"></a>Java code
 --------------------------
-
+</code>
 /*
 * If there is a multi line comment I will use this comment declaration
 * and for single lines I will use a different one.
@@ -213,10 +213,11 @@ function camelCase
 		a - c = d;
 	}
 }
+</code>
 
 <a id="sql"></a>SQL (lite)
 --------------------------
-
+<code>
 /*
 * The comment system will be the same as in Java (and like in almost all other languages
 * I use).
@@ -227,6 +228,7 @@ $stmt = "SELECT
 			a, b, c, d, e, f, h
 		FROM theFirstTable
 		Where a = b";
+</code>
 
 <a id="tech"></a> Design
 ===========================
