@@ -32,6 +32,7 @@ The original mode will be exactly the same as the Hangman with a paper and a pen
 	* Intermediate level: Normal words and 9 steps to complete the gallow
 	* Advanced level: Long and difficult words and only 6 steps to complete the gallow
 	* Expert level: A selection of the hardest words available for Hangman, and you only hang in 3 times...
+	* Custom level: A custom level where you can select the length of the word and your lives/ tries.
 	
 ### Arcade mode
 
@@ -62,12 +63,21 @@ frameworks or libraries, but maybe I will change my mind later on.
 
 The design images are very simple sketches from the final design. But the main idea will be clear from the sketches. There will be 3 important screens:
 
-The main menu:
+The main menu: <br>
 ![Main menu](/doc/main.jpg)
 
-The level menu:
+The level menu: <br>
 ![Level menu](/doc/level.jpg)
 
-The game:
+The game: <br>
 ![Game screen](/doc/game.jpg)
+
+Scoreboard: <br>
+![Scoreboard](/doc/scoreboard.jpg)
+
+Gameover: <br>
+![Gameover](/doc/gameover.jpg)
+
+Won: <br>
+![Gameover](/doc/won.jpg)
 
