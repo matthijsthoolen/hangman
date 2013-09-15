@@ -194,7 +194,7 @@ and a description but I will just give a short example for each coding language.
 
 <a id="java"></a>Java code
 --------------------------
-</code>
+<code>
 /*
 * If there is a multi line comment I will use this comment declaration
 * and for single lines I will use a different one.
