@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@drawable/backrepeat"
+              android:gravity="center_horizontal"
+        >
+    <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:id="@+id/imageView"
+            android:layout_gravity="center"
+            android:src="@drawable/title"
+            />
+    <Button android:id="@+id/originalMenu"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Original mode"
+            android:layout_marginTop="15dip"
+            android:onClick="onClick"
+            />
+    <Button android:id="@+id/arcadeMenu"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Arcade mode"
+            android:layout_marginTop="15dip"
+            android:onClick="onClick"
+            />
+    <Button android:id="@+id/scoreboard"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Scoreboard"
+            android:layout_marginTop="15dip"
+            android:onClick="onClick"
+            />
+
+</LinearLayout>
+

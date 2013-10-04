@@ -5,6 +5,7 @@ Hangman's resurrection
 	*	[Hangmen](#hangman)
 *	[Technical](#tech)
 	*	[Libraries and Frameworks](#libraries)
+	*   [Installation](#instal)
 *	[Design](#design)
 
 <a id="overview"></a>Overview
@@ -54,9 +55,20 @@ The arcade mode will be a totally new experience for Hangman! Expect what you do
 
 I will use the [AndEngine] [1] android framework. This framework is free to use and the sample games look great for my Hangman project. 
 And there is a book available with more samples and tutorials, so that will be a good starting point. At this moment I think I don't need more
-frameworks or libraries, but maybe I will change my mind later on. 
+frameworks or libraries, but maybe I will change my mind later on.
 
 [1]: http://www.andengine.org/
+
+<a id="instal"></a> Installation
+-----------------------------------------------
+
+1. clone https://github.com/Eragon666/hangman.git
+2. Open project in your favorite IDE as a project with existing sources
+3. Run application
+
+Note for beta: I was struggling for to long with the xml parser to parse a file from the res path. So I couldn't finish the database in time for the beta.
+But almost all features are in the app already, only the scoreboard isn't working and there is only one word (so its a pretty boring game...). But for the final release it
+will be done ofcourse.
 
 <a id="tech"></a> Design
 ===========================
