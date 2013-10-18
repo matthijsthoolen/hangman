@@ -7,12 +7,19 @@
 
     <application android:label="@string/app_name"
                  android:icon="@drawable/ic_launcher">
-        <activity android:name="com.mprog.hangman.MainMenu"
+        <activity android:name="com.mprog.hangman.Launcher"
                   android:label="@string/app_name"
                   android:theme="@android:style/Theme.Black.NoTitleBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.mprog.hangman.MainMenu"
+                  android:label="@string/app_name"
+                  android:theme="@android:style/Theme.Black.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT"/>
             </intent-filter>
         </activity>
         <activity android:name="com.mprog.hangman.OriginalMenu"
@@ -43,21 +50,13 @@
                 <action android:name="android.intent.action.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:name="com.mprog.hangman.Won"
+        <activity android:name=".EndMessage"
                   android:label="@string/app_name"
                   android:theme="@android:style/Theme.Black.NoTitleBar">
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:name="com.mprog.hangman.Lost"
-                  android:label="@string/app_name"
-                  android:theme="@android:style/Theme.Black.NoTitleBar">
-            <intent-filter>
-                <action android:name="android.intent.action.DEFAULT"/>
-            </intent-filter>
-        </activity>
-
 
     </application>
 

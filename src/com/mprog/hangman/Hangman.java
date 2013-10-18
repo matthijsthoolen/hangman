@@ -1,8 +1,9 @@
 package com.mprog.hangman;
 
-import android.app.Activity;
 import android.util.Log;
+import com.mprog.hangman.database.DatabaseHelper;
 import com.mprog.hangman.database.Dictionary;
+import com.mprog.hangman.database.Settings;
 import com.mprog.hangman.database.Scoreboard;
 
 import java.util.Arrays;
@@ -14,7 +15,7 @@ import java.util.Arrays;
  * Time: 18:09
  * To change this template use File | Settings | File Templates.
  */
-public class Hangman extends Activity {
+public class Hangman {
     private static int tries;
     private static String word[];
     private static String guessed[];
@@ -25,17 +26,53 @@ public class Hangman extends Activity {
     //For the beta there is only one word...
     Dictionary wordInfo = new Dictionary("parteretrap", 1);
 
-    public Hangman(int level, HangmanDraw drawView2) {
-         //At the moment everything will be set with the same settings
+    public Hangman(HangmanDraw drawView2, Settings settings) {
+         //At the moment everything will be set with the same Settings
         scoreboard = new Scoreboard();
-        setLevel(level);
+        setLevel(settings.get_level());
         setScore(0);
-        setLives(13);
+        setLives(settings.get_tries());
         setTries(0);
         setStatus(0);
+        setupHangman(settings);
         drawView = drawView2;
-        word = new String[wordInfo.getLength()];
-        guessed = new String[26];
+
+    }
+
+    private void setupHangman(Settings settings) {
+        DatabaseHelper db = new DatabaseHelper(Launcher.mainContext);
+        Log.d("hangman debug EXTRA", "Trying to generate word");
+        if (checkDBQueue()) {
+            wordInfo = db.getRandomWord(settings);
+            clearDBQueue();
+            word = new String[wordInfo.getLength()];
+            guessed = new String[26];
+        }
+        Log.d("Hangman debug EXTRA", "Generated word");
+    }
+
+
+
+    /**
+     * Check if the DB is already used by a async task. If so, wait until its free again
+     * ALWAYS call clearDBqueue afterwards.
+     * @return
+     */
+    private boolean checkDBQueue() {
+
+        DatabaseHelper.gameQueue = 1;
+
+        while (DatabaseHelper.asyncQueue == 1) {
+            Log.d("Hangman debug EXTRA", "waiting");
+        };
+
+        Log.d("Hangman debug EXTRA", "done waiting");
+
+        return true;
+    }
+
+    private void clearDBQueue() {
+        DatabaseHelper.gameQueue = 0;
     }
 
     /*
@@ -44,12 +81,9 @@ public class Hangman extends Activity {
     public void guessLetter(String letterGuess) {
         letterGuess = letterGuess.toLowerCase();
 
-        Log.e("DEBUG", "GUESS: " + letterGuess);
-
         //If not a letter, or already guessed before
         if (!letterGuess.matches("^[a-z]+$") || Arrays.asList(guessed).contains(letterGuess))
         {
-            Log.e("DEBUG", "INVALID INPUT");
             return;
         }
         guessed[Hangman.tries] = letterGuess;
@@ -88,7 +122,7 @@ public class Hangman extends Activity {
     public void guessWord(String wordGuess) {
         if (wordGuess.toLowerCase() == wordInfo.getWord())
         {
-            Log.e("debug", "woohoe you won, congrats!");
+            Log.e("debug", "woohoe you endmessage, congrats!");
             setStatus(1);
         }
         else
