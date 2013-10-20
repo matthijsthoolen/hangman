@@ -1,0 +1,91 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/backrepeat"
+    android:gravity="center_horizontal"
+    >
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:id="@+id/imageView"
+        android:layout_gravity="center"
+        android:src="@drawable/title"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Number of lives"
+        android:id="@+id/textView"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="15dp"/>
+
+    <SeekBar
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/NrTries"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:text="26"
+        android:id="@+id/NrTriesProgress"
+        android:layout_toRightOf="@+id/NrTries"
+        android:layout_alignTop="@+id/NrTries"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Word length"
+        android:id="@+id/textView1"
+        android:layout_below="@+id/NrTries"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"/>
+
+    <SeekBar
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/wordLength"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/textView1"/>
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:text="15"
+        android:id="@+id/wordLengthProgress"
+        android:layout_gravity="center_horizontal"
+        android:layout_toRightOf="@+id/wordLength"
+        android:layout_alignTop="@+id/wordLength"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"/>
+
+    <Button android:id="@+id/play"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Start game"
+            android:layout_below="@+id/wordLength"
+            android:onClick="onClick"
+            android:layout_marginTop="20dp"/>
+
+    <Button android:id="@+id/backMenu"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Back to Menu"
+            android:layout_below="@+id/play"
+            android:onClick="onClick"
+            android:layout_marginTop="20dp"/>
+</RelativeLayout>

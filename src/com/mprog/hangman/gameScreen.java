@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.*;
 import android.view.inputmethod.InputMethodManager;
 import com.mprog.hangman.database.DatabaseHelper;
@@ -32,6 +33,10 @@ public class GameScreen extends Activity {
             Settings settings = (Settings)i.getSerializableExtra("Settings");
             this.settings = settings;
         }
+        else if (this.settings == null) {
+            //If there are no settings available, start a intermediate game.
+            this.settings = new Settings(2, config.ORIGINAL_INTERMEDIATE_LIVES, config.ORIGINAL_INTERMEDIATE_MINLENGTH, config.ORIGINAL_INTERMEDIATE_MAXLENGTH);
+        }
 
         hangman = new Hangman(drawView, this.settings);
         /*
@@ -40,7 +45,6 @@ public class GameScreen extends Activity {
         InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
         imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
     }
-
 
     /*
      * Remove keyboard when user exits the gameScreen
@@ -91,11 +95,14 @@ public class GameScreen extends Activity {
      */
     private void checkStatus() {
         String text = null;
+        String result = null;
 
         if (hangman.getStatus() == 1) {
             text = "You won! Your score: " + hangman.getScore();
+            result = "won";
         } else if (hangman.getStatus() == 2) {
             text = "You lost! It was: " + hangman.wordInfo.getWord();
+            result = "lost";
         }
 
         if (text != null) {
@@ -104,6 +111,7 @@ public class GameScreen extends Activity {
 
             Intent nextScreen = new Intent(getApplicationContext(), EndMessage.class);
             nextScreen.putExtra("Text", text);
+            nextScreen.putExtra("Result", result);
             startActivity(nextScreen);
             this.finish();
         }
@@ -123,15 +131,13 @@ public class GameScreen extends Activity {
                 this.finish();
                 return true;
 
-            case R.id.menu_about:
-                hangman.guessLetter("a");
-                setContentView(drawView);
+            case R.id.menu_reset:
+                nextScreen = new Intent(getApplicationContext(), GameScreen.class);
+                startActivity(nextScreen);
+                this.finish();
                 return true;
 
-            case R.id.menu_preferences:
-                //WordGenerator test = new WordGenerator();
-                //test.main();
-                //Log.e("Test", "Log is working...");
+            case R.id.menu_about:
                 return true;
 
             default:

@@ -5,36 +5,31 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/backrepeat"
+        android:background="@drawable/backrepeat_launcher"
         android:gravity="center_horizontal">
 
     <TextView
         style="@style/FontTitle"
         android:gravity="center_horizontal"
         android:text="Loading hangman"
-        android:id="@+id/loadingText"/>
-
-    <TextView
-        style="@style/FontTitle"
-        android:gravity="center_horizontal"
-        android:text="Choose language"
-        android:id="@+id/preferencesText"
-        android:layout_marginTop="80dp"
-        android:visibility="gone"/>
+        android:id="@+id/loadingText"
+        android:layout_marginTop="120dp"/>
 
     <ProgressBar
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:id="@+id/progressBar"
         android:layout_marginTop="0dp"
-        android:indeterminate="false"/>
+        android:indeterminate="false"
+        android:layout_below="@+id/loadingText"/>
 
     <ImageButton
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:id="@+id/buttonEnglish"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/preferencesText"
+        android:layout_below="@+id/loadingText"
         android:layout_marginRight="60dp"
         android:src="@drawable/english"
         android:scaleType="fitCenter"
@@ -46,7 +41,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/buttonDutch"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/preferencesText"
+        android:layout_below="@+id/loadingText"
         android:layout_marginLeft="60dp"
         android:src="@drawable/dutch"
         android:scaleType="fitCenter"

@@ -15,36 +15,14 @@
             android:src="@drawable/title"
             />
 
-    <TextView
-        android:layout_width="fill_parent"
+    <ListView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        android:id="@+id/score1"
-        android:gravity="center_horizontal"/>
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:id="@+id/score2"
-        android:gravity="center_horizontal"/>
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:id="@+id/score3"
-        android:gravity="center_horizontal"/>
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:id="@+id/score4"
-        android:gravity="center_horizontal"/>
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:id="@+id/score5"
-        android:gravity="center_horizontal"/>
+        android:id="@+id/listView"
+        android:layout_gravity="center"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:listSelector="@android:color/transparent"/>
 
     <Button android:id="@+id/backMenu"
             android:layout_width="fill_parent"

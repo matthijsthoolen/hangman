@@ -2,7 +2,7 @@ package com.mprog.hangman;
 
 import android.util.Log;
 import com.mprog.hangman.database.DatabaseHelper;
-import com.mprog.hangman.database.Dictionary;
+import com.mprog.hangman.database.Word;
 import com.mprog.hangman.database.Settings;
 import com.mprog.hangman.database.Scoreboard;
 
@@ -20,14 +20,15 @@ public class Hangman {
     private static String word[];
     private static String guessed[];
     private static int status;
-    HangmanDraw drawView;
-    static Scoreboard scoreboard;
 
-    //For the beta there is only one word...
-    Dictionary wordInfo = new Dictionary("parteretrap", 1);
+    HangmanDraw drawView;
+    Settings settings;
+    static Scoreboard scoreboard;
+    Word wordInfo;
 
     public Hangman(HangmanDraw drawView2, Settings settings) {
          //At the moment everything will be set with the same Settings
+        this.settings = settings;
         scoreboard = new Scoreboard();
         setLevel(settings.get_level());
         setScore(0);
@@ -36,19 +37,18 @@ public class Hangman {
         setStatus(0);
         setupHangman(settings);
         drawView = drawView2;
-
     }
 
     private void setupHangman(Settings settings) {
         DatabaseHelper db = new DatabaseHelper(Launcher.mainContext);
-        Log.d("hangman debug EXTRA", "Trying to generate word");
         if (checkDBQueue()) {
             wordInfo = db.getRandomWord(settings);
+            Log.d("Hangman debug", "Choosen word: " + wordInfo.getWord());
             clearDBQueue();
             word = new String[wordInfo.getLength()];
             guessed = new String[26];
+            scoreboard.setWord(wordInfo.getWord());
         }
-        Log.d("Hangman debug EXTRA", "Generated word");
     }
 
 
@@ -62,11 +62,7 @@ public class Hangman {
 
         DatabaseHelper.gameQueue = 1;
 
-        while (DatabaseHelper.asyncQueue == 1) {
-            Log.d("Hangman debug EXTRA", "waiting");
-        };
-
-        Log.d("Hangman debug EXTRA", "done waiting");
+        while (DatabaseHelper.asyncQueue == 1);
 
         return true;
     }
@@ -106,7 +102,7 @@ public class Hangman {
             increaseTries();
         } else {
             increaseTries();
-            increaseScore(100);
+            increaseScore(config.ORIGINAL_POINTS_GOODGUESS);
         }
 
         if (getLives() == 0) {
@@ -114,26 +110,10 @@ public class Hangman {
         }
 
         checkWon();
-
-        Log.e("DEBUG", "Lives: " + getLives());
-        Log.e("DEBUG", "Tries: " + getTries());
-    }
-
-    public void guessWord(String wordGuess) {
-        if (wordGuess.toLowerCase() == wordInfo.getWord())
-        {
-            Log.e("debug", "woohoe you endmessage, congrats!");
-            setStatus(1);
-        }
-        else
-        {
-            decreaseLives();
-            increaseTries();
-        }
     }
 
     /*
-     * Check if the word is completed already, if so set status to 1
+     * Check if the word is completed already, if so set status to 1 and calculate new score
      */
     private void checkWon() {
         for (String letter : word) {
@@ -141,6 +121,10 @@ public class Hangman {
                 return;
             }
         }
+
+        //Calculate endscore. Foreach lives left, you get 2500/start lives + a bonus for each letter.
+        increaseScore(getLives() * (config.ORIGINAL_POINTS_LIVESOVER/settings.get_tries()) + wordInfo.getLength() * config.ORIGINAL_POINTS_LETTERBONUS);
+        scoreboard.setLives(getTries());
 
         setStatus(1);
     }

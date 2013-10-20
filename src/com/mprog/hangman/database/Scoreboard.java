@@ -13,29 +13,29 @@ public class Scoreboard {
     int _score;
     int _level;
     int _lives;
-    int _word_id;
+    String _word;
     int _date;
 
     public Scoreboard() {
 
     }
 
-    public Scoreboard(String username, int score, int level, int lives, int word_id, int date) {
+    public Scoreboard(String username, int score, int level, int lives, String word, int date) {
         this._username = username;
         this._score = score;
         this._level = level;
         this._lives = lives;
-        this._word_id = word_id;
+        this._word = word;
         this._date = date;
     }
 
-    public Scoreboard(int id, String username, int score, int level, int lives, int word_id, int date) {
+    public Scoreboard(int id, String username, int score, int level, int lives, String word, int date) {
         this._id = id;
         this._username = username;
         this._score = score;
         this._level = level;
         this._lives = lives;
-        this._word_id = word_id;
+        this._word = word;
         this._date = date;
     }
 
@@ -79,12 +79,12 @@ public class Scoreboard {
         this._lives = lives;
     }
 
-    public int getWordID() {
-        return this._word_id;
+    public String getWord() {
+        return this._word;
     }
 
-    public void setWordID(int id) {
-        this._word_id = id;
+    public void setWord(String word) {
+        this._word = word;
     }
 
     public int getDate() {

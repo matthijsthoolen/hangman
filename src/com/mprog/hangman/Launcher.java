@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import com.mprog.hangman.database.DatabaseHelper;
 import com.mprog.hangman.database.Preferences;
@@ -24,7 +25,8 @@ public class Launcher extends Activity implements launcherInterface {
 
     ImageButton dutch;
     ImageButton english;
-    TextView preferenceText;
+    TextView text;
+    ProgressBar progressBar;
     private boolean menuStatus = false;
     public static Context mainContext;
 
@@ -38,8 +40,6 @@ public class Launcher extends Activity implements launcherInterface {
         setContentView(R.layout.launcher);
 
         long count = db.getRecordCount(db.TABLE_DICTIONARY);
-
-        Log.d("Hangman debug", "Count: " + count);
 
         db.close();
 
@@ -60,10 +60,12 @@ public class Launcher extends Activity implements launcherInterface {
     public void askPreferredLanguage() {
         english = (ImageButton) findViewById(R.id.buttonEnglish);
         dutch = (ImageButton) findViewById(R.id.buttonDutch);
-        preferenceText = (TextView) findViewById(R.id.preferencesText);
+        text = (TextView) findViewById(R.id.loadingText);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        progressBar.setVisibility(View.GONE);
         dutch.setVisibility(0);
         english.setVisibility(0);
-        preferenceText.setVisibility(0);
+        text.setText("Choose dictionary language: ");
 
 
         dutch.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +74,8 @@ public class Launcher extends Activity implements launcherInterface {
                 setPreferences("dutchwords", 160049);
                 dutch.setVisibility(View.GONE);
                 english.setVisibility(View.GONE);
-                preferenceText.setVisibility(View.GONE);
+                text.setText("Installing Hangman. Please wait");
+                progressBar.setVisibility(0);
                 fillDictionary("dutchwords", 0);
             }
 
@@ -84,7 +87,8 @@ public class Launcher extends Activity implements launcherInterface {
                 setPreferences("englishwords", 234369);
                 english.setVisibility(View.GONE);
                 dutch.setVisibility(View.GONE);
-                preferenceText.setVisibility(View.GONE);
+                text.setText("Installing Hangman. Please wait");
+                progressBar.setVisibility(0);
                 fillDictionary("englishwords", 0);
             }
 
@@ -148,8 +152,8 @@ public class Launcher extends Activity implements launcherInterface {
         launcherInterface bridge = new launcherInterface() {
             @Override
             public void updateLaunchScreen(int value) {
-                updateText("Value = " + value);
-                if (value == 2500) {
+                updateText("Installing: " + value + "/" + config.INSTALL_BEFORE_START);
+                if (value == config.INSTALL_BEFORE_START) {
                     continueToMenu();
                 }
             }
@@ -159,7 +163,7 @@ public class Launcher extends Activity implements launcherInterface {
          * If there are already enough records in the database, continue after showing the loader screen for 2 seconds
          * (I just want to show the logo :))
          */
-        if (start >= 2500) {
+        if (start >= config.INSTALL_BEFORE_START) {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {

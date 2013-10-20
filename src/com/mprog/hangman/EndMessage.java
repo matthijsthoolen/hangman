@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class EndMessage extends Activity {
@@ -16,6 +17,15 @@ public class EndMessage extends Activity {
         setContentView(R.layout.endmessage);
         Intent i = getIntent();
         String text = i.getStringExtra("Text");
+        String result = i.getStringExtra("Result");
+        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.endMessageLayout);
+
+        if (result.equals("won")) {
+            linearLayout.setBackgroundResource(R.drawable.backrepeat_won);
+        } else {
+            linearLayout.setBackgroundResource(R.drawable.backrepeat_lost);
+            findViewById(R.id.score).setVisibility(View.GONE);
+        }
         TextView textView = (TextView) findViewById(R.id.endText);
         textView.setText(text);
     }

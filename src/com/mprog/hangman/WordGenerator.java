@@ -5,7 +5,7 @@ import android.os.AsyncTask;
 import android.util.Log;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
-import com.mprog.hangman.database.Dictionary;
+import com.mprog.hangman.database.Word;
 import com.mprog.hangman.database.DatabaseHelper;
 
 import java.io.InputStream;
@@ -29,9 +29,7 @@ public class WordGenerator extends AsyncTask<String, Integer, String> {
 
     @Override
     protected String doInBackground(String... params) {
-        Log.d("Hangman debug", "doInBackground");
         try {
-            Log.d("Hangman", "Wordgenerator started");
             XMLtoDB(context);
         }
         catch (Exception e) {
@@ -39,16 +37,6 @@ public class WordGenerator extends AsyncTask<String, Integer, String> {
         }
 
         return "Executed";
-    }
-
-    @Override
-    protected void onPostExecute(String result) {
-        Log.d("Hangman debug", "postExecute");
-    }
-
-    @Override
-    protected void onPreExecute() {
-        Log.d("Hangman debug", "preExecute");
     }
 
     @Override
@@ -103,12 +91,11 @@ public class WordGenerator extends AsyncTask<String, Integer, String> {
 
             if (xpp.getName() != null && xpp.getName().equals("item")) {
                 xpp.next();
-                Dictionary word = new Dictionary(xpp.getText(), 1);
+                Word word = new Word(xpp.getText(), 1);
 
                 DatabaseHelper.asyncQueue = 1;
 
                 while (DatabaseHelper.gameQueue == 1) {
-                    Log.d("Hangman debug", "waiting...");
                     Thread.sleep(500);
                 };
 
@@ -117,8 +104,6 @@ public class WordGenerator extends AsyncTask<String, Integer, String> {
                 DatabaseHelper.asyncQueue = 0;
 
                 xpp.nextTag();
-
-                Log.d("Hangman debug", "word: " + word.getWord());
 
                 /**
                  * On every X insert, update the launcher with the current progress.

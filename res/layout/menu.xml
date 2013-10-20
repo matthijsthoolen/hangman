@@ -7,9 +7,9 @@
           android:icon="@drawable/icon_home"
           android:title="Stoppen" />
 
-    <item android:id="@+id/menu_preferences"
-          android:icon="@drawable/icon_preferences"
-          android:title="Preferences" />
+    <item android:id="@+id/menu_reset"
+          android:icon="@drawable/icon_reset"
+          android:title="Reset" />
 
     <item android:id="@+id/menu_about"
           android:icon="@drawable/icon_about"

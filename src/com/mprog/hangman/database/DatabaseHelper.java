@@ -7,7 +7,7 @@ import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-import com.mprog.hangman.WordGenerator;
+import com.mprog.hangman.Launcher;
 
 import java.util.Random;
 
@@ -25,17 +25,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static int asyncQueue = 0;
 
     public DatabaseHelper(Context context) {
-        super(context, DATABASE, null, 16);
+        super(context, DATABASE, null, 25);
         contextSave = context;
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        Log.d("Hangman", "Created database");
         db.execSQL("CREATE TABLE " + TABLE_PREFERENCES + " (id INTEGER PRIMARY KEY , language String, nrWords INTEGER)");
         db.execSQL("CREATE TABLE " + TABLE_DICTIONARY + " (id INTEGER PRIMARY KEY , word TEXT, length INTEGER, level INTEGER)");
         db.execSQL("CREATE TABLE " + TABLE_HISTORY + " (id INTEGER PRIMARY KEY , word_id INTEGER, last_used INTEGER)");
-        db.execSQL("CREATE TABLE " + TABLE_SCOREBOARD + " (id INTEGER PRIMARY KEY , username INTEGER, score INTEGER, level INTEGER, lives INTEGER, word_id INTEGER, date INTEGER)");
+        db.execSQL("CREATE TABLE " + TABLE_SCOREBOARD + " (id INTEGER PRIMARY KEY , username INTEGER, score INTEGER, level INTEGER, lives INTEGER, word STRING, date INTEGER)");
     }
 
     @Override
@@ -47,8 +46,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    /**
+     * Save the user preferences to the database.
+     * @param language
+     * @param nrWords
+     */
     public void setPreferences(String language, int nrWords) {
-        SQLiteDatabase db = this.getWritableDatabase();
+        SQLiteDatabase db = getDatabaseConnection("writable");
 
         ContentValues values = new ContentValues();
         values.put("language", language);
@@ -56,11 +60,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         db.insert(TABLE_PREFERENCES, null, values);
         db.close();
-        Log.d("Hangman debug", "Preferences added!");
     }
 
+    /**
+     * Get the preferences from the database..
+     * @return
+     */
     public Preferences getPreferences() {
-        SQLiteDatabase db = this.getReadableDatabase();
+        SQLiteDatabase db = getDatabaseConnection("readable");
 
         Cursor cursor = db.query(TABLE_PREFERENCES, new String[] { "id",
                 "language", "nrWords"}, "id" + "=?",
@@ -73,15 +80,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Preferences pref = new Preferences(Integer.parseInt(cursor.getString(0)),
                 cursor.getString(1), cursor.getInt(2));
 
-        Log.d("Hangman debug", "Preferences count BLA " + pref.getNrWords());
-
         db.close();
 
         return pref;
     }
 
-    public void addWord(Dictionary word) {
-        SQLiteDatabase db = this.getWritableDatabase();
+    /**
+     * Add a new word to the database.
+     * @param word
+     */
+    public void addWord(Word word) {
+        SQLiteDatabase db = getDatabaseConnection("writable");
 
         ContentValues values = new ContentValues();
         values.put("word", word.getWord());
@@ -93,12 +102,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     /**
-     * Get a random word in the Dictionary object
-     * @return Dictionary
+     * Get a random word in the Word object
+     * @return Word
      */
-    public Dictionary getRandomWord(Settings settings) {
+    public Word getRandomWord(Settings settings) {
         int count = (int) getRecordCount(TABLE_DICTIONARY);
-        SQLiteDatabase db = this.getReadableDatabase();
+        SQLiteDatabase db = getDatabaseConnection("readable");
 
         Random r = new Random();
         int random = r.nextInt(count - 1 + 1) + 1;
@@ -120,11 +129,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         cursor.moveToFirst();
 
-        Dictionary word = new Dictionary(Integer.parseInt(cursor.getString(0)),
+        Word word = new Word(Integer.parseInt(cursor.getString(0)),
                 cursor.getString(1), cursor.getInt(2));
-
-        Log.d("Hangman debug", "WORD = " + word.getWord());
-        Log.d("Hangman debug", "ID = " + word.getID());
 
         return word;
     }
@@ -135,7 +141,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      * @return
      */
     public long getRecordCount(String tableName) {
-        SQLiteDatabase db = this.getWritableDatabase();
+        SQLiteDatabase db = getDatabaseConnection("writable");
         long count = DatabaseUtils.queryNumEntries(db, tableName);
         db.close();
         return count;
@@ -146,24 +152,26 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      * @param score
      */
     public void addScore(Scoreboard score) {
-        SQLiteDatabase db = this.getWritableDatabase();
+        SQLiteDatabase db = getDatabaseConnection("writable");
 
         ContentValues values = new ContentValues();
         values.put("username", score.getUsername());
         values.put("score", score.getScore());
         values.put("level", score.getLevel());
         values.put("lives", score.getLives());
-        values.put("word_id", score.getWordID());
+        values.put("word", score.getWord());
         values.put("date", score.getDate());
 
         db.insert(TABLE_SCOREBOARD, null, values) ;
         db.close();
-
-        Log.d("Hangman debug", "Score saved!");
     }
 
+    /**
+     * Not used (yet)
+     * @param history
+     */
     void makeHistory(History history) {
-        SQLiteDatabase db = this.getWritableDatabase();
+        SQLiteDatabase db = getDatabaseConnection("writable");
 
         ContentValues values = new ContentValues();
         values.put("id", history.getID());
@@ -172,6 +180,34 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         db.insert(TABLE_HISTORY, null, values);
         db.close();
+    }
+
+    /**
+     * Return a readable or writable database, catch the NullPointerException.
+     * @param sort
+     * @return
+     */
+    private SQLiteDatabase getDatabaseConnection(String sort) {
+
+        if (sort.equals("readable") || sort.equals("writable")) {
+
+            SQLiteDatabase db;
+
+            try {
+                if (sort.equals("readable"))db = this.getReadableDatabase();
+                else db = this.getWritableDatabase();
+            } catch (NullPointerException e) {
+                Log.e("Hangman","catched NullPointerException @ addWord");
+                DatabaseHelper dbHelp = new DatabaseHelper(Launcher.mainContext);
+
+                if (sort.equals("readable"))db = dbHelp.getReadableDatabase();
+                else db = dbHelp.getWritableDatabase();
+            }
+
+            return db;
+        }
+
+        return null;
     }
 
 
