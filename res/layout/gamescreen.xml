@@ -1,12 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:background="@drawable/backrepeat_gamescreen"
+              android:id="@+id/gamescreenLayout">
 
-    <activity android:name=".MainActivity"
-              android:label="@string/app_name"
-              android:windowSoftInputMode="stateAlwaysVisible" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:textSize="28sp"
+        android:textColor="#000000"
+        android:text="ADO DEN HAAG"
+        android:id="@+id/word"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="15dp"/>
 
-</LinearLayout>
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:text="Score: 0"
+        android:id="@+id/score"
+        android:layout_below="@+id/gallowView"
+        android:layout_marginTop="-35dp"
+        android:layout_marginLeft="100dp"/>
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:text="Lives: 0"
+        android:id="@+id/lives"
+        android:layout_below="@+id/gallowView"
+        android:layout_marginTop="-35dp"
+        android:layout_marginLeft="180dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gallowView"
+        android:layout_below="@+id/word"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/hangman13"/>
+</RelativeLayout>

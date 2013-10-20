@@ -20,6 +20,9 @@ public class EndMessage extends Activity {
         String result = i.getStringExtra("Result");
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.endMessageLayout);
 
+        /**
+         * Set a different background for winning and losing
+         */
         if (result.equals("won")) {
             linearLayout.setBackgroundResource(R.drawable.backrepeat_won);
         } else {
@@ -31,7 +34,6 @@ public class EndMessage extends Activity {
     }
 
     public void onClick(View view) {
-        //Starting a new Intent
         switch(view.getId()) {
             case R.id.again:
                 Intent nextScreen = new Intent(getApplicationContext(), GameScreen.class);

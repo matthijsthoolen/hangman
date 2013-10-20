@@ -1,95 +1,147 @@
 package com.mprog.hangman;
 
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.RectF;
+import android.graphics.*;
+import android.graphics.drawable.BitmapDrawable;
 import android.util.Log;
+import android.view.Display;
 import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.view.WindowManager;
 
+import java.lang.reflect.Array;
+
+/**
+ * This class draws the gamescreen on every move.
+ */
 public class HangmanDraw extends View {
-    Paint paint = new Paint();
-    Paint green, black, beige, brown;
 
-    public HangmanDraw(Context context) {
+    Canvas canvas;
+    Bitmap background;
+    Bitmap gallow;
+
+    Display display;
+    int width;
+    int height;
+    //Fix for bigger screens
+    int scrMlt = 1;
+
+    Paint paint = new Paint();
+
+    HangmanDraw(Context context) {
         super(context);
+        background = (Bitmap) BitmapFactory.decodeResource(getResources(), R.drawable.background_gamescreen);
         paint.setStrokeWidth(8);
-        green = black = beige = brown = new Paint(paint);
-        green.setColor(Color.GREEN);
-        black.setColor(Color.BLACK);
-        beige.setColor(Color.parseColor("#ffd070"));
-        brown.setColor(Color.parseColor("#5b331d"));
+        paint.setColor(Color.BLACK);
+
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        display = wm.getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        width = size.x;
+        height = size.y;
+
+        if (width >= 720) {
+            scrMlt = 2;
+        }
     }
 
     @Override
     public void onDraw(Canvas canvas) {
-        drawWord(canvas, Hangman.getWord());
-        GallowDraw(canvas, Hangman.getLives());
-        ScoreDraw(canvas, Hangman.getScore());
-        LivesDraw(canvas, Hangman.getLives());
-        drawGuessed(canvas, Hangman.getGuessed());
+        this.canvas = canvas;
+        drawBackground();
+        drawGallow();
+        drawWord();
+        drawScore();
+        drawLives();
+        drawGuessed();
     }
 
-    private void drawWord(Canvas canvas, String[] word) {
-        int x = 50;
-        int y = 700;
-        black.setTextSize(50);
+    private void drawBackground() {
+        canvas.drawBitmap(background, 0, 0, null);
+    }
 
+    /**
+     * Draw the correct gallow image. Calculate the best hangman image, and then search the ID from the resource
+     */
+    private void drawGallow() {
+        double steps = (((double)config.DRAW_GALLOW_STEPS)/Hangman.settings.get_tries()) * (Hangman.settings.get_tries() - Hangman.getLives());
+        int nr;
+        if (steps < 12) nr = (int)Math.round(steps);
+        else if (steps >= 13) nr = 13;
+        else nr = 12;
+
+        String HANGMAN = "hangman" + nr;
+
+        int resID = this.getResources().getIdentifier(HANGMAN, "drawable", "com.mprog.hangman");
+        gallow = (Bitmap) BitmapFactory.decodeResource(getResources(), resID);
+        canvas.drawBitmap(gallow, 0, (45 * scrMlt), null);
+    }
+
+    private void drawWord() {
+        String[] word = Hangman.getWord();
+        /**
+         * Center the word and make sure it fits on the screen.
+         */
+        int y = 36 * scrMlt;
+        int xIncrease = (width-(20 * scrMlt))/(Array.getLength(word));
+        if (xIncrease > 100) {
+            xIncrease = 100;
+        }
+        int x = (width - (Array.getLength(word) * xIncrease))/2;
+
+        paint.setTextSize(35 * scrMlt);
+
+        /**
+         * Print each letter of the word, the empty slots are being filled with a underscore
+         */
         for (String letter : word) {
             if (letter == null) {
-                canvas.drawText("_", x, y, black);
+                canvas.drawText("_", x, y, paint);
             } else {
-                canvas.drawText("" + letter, x, y, black);
+                canvas.drawText("" + letter, x, y, paint);
             }
-            x += 50;
+            x += xIncrease;
         }
     }
 
-    private void ScoreDraw(Canvas canvas, int score) {
-        black.setTextSize(30);
-        canvas.drawText("Score:" + score, 550, 30, black);
+    /**
+     * Draw the current score
+     */
+    private void drawScore() {
+        paint.setTextSize(18 * scrMlt);
+        int startX = (int)gallow.getWidth()/4;
+        int startY = gallow.getHeight() + (30 * scrMlt);
+        canvas.drawText("Score: " + Hangman.getScore(), startX, startY, paint);
+
     }
 
-    private void LivesDraw(Canvas canvas, int lives) {
-        black.setTextSize(30);
-        canvas.drawText("lives:" + lives, 550, 75, black);
+    /**
+     * Draw the remaining lives
+     */
+    private void drawLives() {
+        paint.setTextSize(18 * scrMlt);
+        int startX = (int)gallow.getWidth()/5 + (140 * scrMlt);
+        int startY = gallow.getHeight() + (30 * scrMlt);
+        canvas.drawText("Lives: " + Hangman.getLives(), startX, startY, paint);
     }
 
-    private void drawGuessed(Canvas canvas, String[] guessedArray)
-    {
-        int x = 400;
-        int y = 200;
-        black.setTextSize(40);
-        for(String letter : guessedArray) {
+    /**
+     * Draw all the already guessed letters
+     */
+    private void drawGuessed() {
+        int x = 2 * scrMlt;
+        int y = 60 * scrMlt;
+        paint.setTextSize(14 * scrMlt);
+        for(String letter : Hangman.getGuessed()) {
             if (letter != null) {
-                canvas.drawText(" " + letter, x, y, black);
-                x += 35;
-                if (x > 650) {
-                    x = 400;
-                    y += 40;
+                canvas.drawText(" " + letter, x, y, paint);
+                x += (16 * scrMlt);
+                if (x > (40 * scrMlt)) {
+                    x = (2 * scrMlt);
+                    y += (20 * scrMlt);
                 }
             }
         }
-    }
-
-    private void GallowDraw(Canvas canvas, int i) {
-        if (i <= 12) canvas.drawLine(10, 600, 400, 600, green); //bottom
-        if (i <= 11) canvas.drawLine(100, 192, 100, 600, brown); //paal
-        if (i <= 10) canvas.drawLine(100, 550, 150, 600, brown); //paalsteun bottom 1
-        if (i <= 9) canvas.drawLine(100, 550, 50, 600, brown); //paalsteun bottom 2
-        if (i <= 8) canvas.drawLine(100, 250, 150, 200, brown); //bovenbalk steun
-        if (i <= 7) canvas.drawLine(100, 200, 320, 200, brown); //bovenbalk
-        if (i <= 6) canvas.drawLine(316, 200, 316, 250, brown); //touw
-        if (i <= 5) canvas.drawCircle(316, 250, 35, beige); //hoofd
-        if (i <= 4) canvas.drawOval(new RectF(280, 285, 350, 435),beige); //body
-        if (i <= 3) canvas.drawLine(300, 290, 250, 400, beige); //arm1
-        if (i <= 2) canvas.drawLine(330, 290, 380, 400, beige); //arm2
-        if (i <= 1) canvas.drawLine(300, 425, 290, 495, beige); //leg1
-        if (i <= 0) canvas.drawLine(330, 425, 340, 495, beige); //leg2
     }
 
 }

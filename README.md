@@ -6,6 +6,7 @@ Hangman's resurrection
 *	[Technical](#tech)
 	*	[Libraries and Frameworks](#libraries)
 	*   [Installation](#instal)
+	*   [Final release](#final)
 *	[Design](#design)
 
 <a id="overview"></a>Overview
@@ -69,6 +70,19 @@ frameworks or libraries, but maybe I will change my mind later on.
 Note for beta: I was struggling for to long with the xml parser to parse a file from the res path. So I couldn't finish the database in time for the beta.
 But almost all features are in the app already, only the scoreboard isn't working and there is only one word (so its a pretty boring game...). But for the final release it
 will be done ofcourse.
+
+<a id="final"></a> Final release
+-----------------------------------------------
+
+In the final release I changed the design from the hangman app, I used photoshop to create nice states for the Gallow. And I made a new launcher background and a icon for the app.
+And I totally rewrite the HangmanDraw class to support the new files and to make it faster.
+
+But because I tested it on my mobile most of the time, I didn't noticed the huge bug on the emulator. The design works on all MDPI and HDPI devices, but on the emulator the CPU is to slow for the XmlPullParser
+and the game to work at the same time (XmlPullParser is in a async task). I used the aSync task to add the words from the XML file in the SQlite database, and in the meantime it was still possible to play the game
+and use the DB (I made a simple queue for the database). I already made all the resources much smaller, but that didn't solve the problem.
+
+Because I discovered this problem to late, I couldn't find a proper fix. So I choose to only add words to the database while the user is at the launcher screen. But this means that not all the words are
+added to the database. But you can still enable this feature, go to Launcher.java and disable row 185.
 
 <a id="tech"></a> Design
 ===========================

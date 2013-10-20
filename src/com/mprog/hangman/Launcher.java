@@ -27,14 +27,13 @@ public class Launcher extends Activity implements launcherInterface {
     ImageButton english;
     TextView text;
     ProgressBar progressBar;
+    WordGenerator word;
     private boolean menuStatus = false;
-    public static Context mainContext;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        DatabaseHelper db = new DatabaseHelper(this);
-        mainContext = this;
+        DatabaseHelper db = new DatabaseHelper(this.getApplicationContext());
         db.getReadableDatabase();
 
         setContentView(R.layout.launcher);
@@ -159,6 +158,9 @@ public class Launcher extends Activity implements launcherInterface {
             }
         };
 
+        word = new WordGenerator(this, bridge, file, start);
+        word.execute("");
+
         /**
          * If there are already enough records in the database, continue after showing the loader screen for 2 seconds
          * (I just want to show the logo :))
@@ -169,11 +171,9 @@ public class Launcher extends Activity implements launcherInterface {
                 public void run() {
                     continueToMenu();
                 }
-            }, 2000);
+            }, 2500);
         }
 
-        WordGenerator word = new WordGenerator(this, bridge, file, start);
-        word.execute("");
     }
 
     private void continueToMenu() {
@@ -181,7 +181,17 @@ public class Launcher extends Activity implements launcherInterface {
             menuStatus = true;
             Intent nextScreen = new Intent(getApplicationContext(), MainMenu.class);
             startActivity(nextScreen);
+            //Disable cancelAsync() to continue parsing the XML file while playing
+            cancelAsync();
+            this.finish();
         }
+    }
+
+    /**
+     * Fix for emulator
+     */
+    public void cancelAsync() {
+        word.cancel(true);
     }
 
 

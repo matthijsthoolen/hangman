@@ -22,7 +22,6 @@ public class GameScreen extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         drawView = new HangmanDraw(this);
-        drawView.setBackgroundColor(Color.WHITE);
         setContentView(drawView);
 
         /**
@@ -38,7 +37,7 @@ public class GameScreen extends Activity {
             this.settings = new Settings(2, config.ORIGINAL_INTERMEDIATE_LIVES, config.ORIGINAL_INTERMEDIATE_MINLENGTH, config.ORIGINAL_INTERMEDIATE_MAXLENGTH);
         }
 
-        hangman = new Hangman(drawView, this.settings);
+        hangman = new Hangman(drawView, this.settings, this.getApplicationContext());
         /*
          *  Show keyboard on create
          */
@@ -65,9 +64,10 @@ public class GameScreen extends Activity {
         char letter = (char)event.getUnicodeChar();
         hangman.guessLetter(String.valueOf(letter));
 
-        checkStatus();
+        if (checkStatus()) {
 
-        setContentView(drawView);
+            setContentView(drawView);
+        }
         return super.onKeyDown(keyCode, event);
     }
 
@@ -93,7 +93,7 @@ public class GameScreen extends Activity {
     /**
      * Check the status of the game. If the game has finished, continue to the next screen.
      */
-    private void checkStatus() {
+    private boolean checkStatus() {
         String text = null;
         String result = null;
 
@@ -106,7 +106,7 @@ public class GameScreen extends Activity {
         }
 
         if (text != null) {
-            DatabaseHelper db = new DatabaseHelper(Launcher.mainContext);
+            DatabaseHelper db = new DatabaseHelper(this.getApplicationContext());
             db.addScore(Hangman.scoreboard);
 
             Intent nextScreen = new Intent(getApplicationContext(), EndMessage.class);
@@ -114,7 +114,9 @@ public class GameScreen extends Activity {
             nextScreen.putExtra("Result", result);
             startActivity(nextScreen);
             this.finish();
+            return false;
         }
+        return true;
     }
 
     /**

@@ -89,6 +89,8 @@ public class WordGenerator extends AsyncTask<String, Integer, String> {
 
         while (eventType != XmlPullParser.END_DOCUMENT) {
 
+            if (isCancelled()) break;
+
             if (xpp.getName() != null && xpp.getName().equals("item")) {
                 xpp.next();
                 Word word = new Word(xpp.getText(), 1);

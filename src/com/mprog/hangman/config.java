@@ -1,11 +1,7 @@
 package com.mprog.hangman;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Matthijs
- * Date: 19-10-13
- * Time: 21:18
- * To change this template use File | Settings | File Templates.
+ * The config settings in this file are used for the game configurations
  */
 public class config {
     public static final int ORIGINAL_NOVICE_MINLENGTH = 4;
@@ -29,4 +25,6 @@ public class config {
     public static final int ORIGINAL_POINTS_LETTERBONUS = 50;
 
     public static final int INSTALL_BEFORE_START = 2500;
+
+    public static final int DRAW_GALLOW_STEPS = 13;
 }

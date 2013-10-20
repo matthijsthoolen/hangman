@@ -36,7 +36,7 @@ public class CustomSettings extends Activity {
         lettersSeekbar = (SeekBar)findViewById(R.id.wordLength);
         lettersSeekbar.incrementProgressBy(1);
         lettersSeekbar.setProgress(config.ORIGINAL_CUSTOM_MAXLENGTH);
-        lettersSeekbar.setMax(12);
+        lettersSeekbar.setMax(14);
 
         livesProgress = (TextView)findViewById(R.id.NrTriesProgress);
         livesProgress.setText("" + config.ORIGINAL_CUSTOM_LIVES);

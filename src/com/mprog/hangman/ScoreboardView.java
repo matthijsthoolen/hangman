@@ -31,25 +31,29 @@ public class ScoreboardView extends Activity {
      * Generate scoreboard in a listview
      */
     public void generateScoreboard() {
-        DatabaseHelper dbHelper = new DatabaseHelper(Launcher.mainContext);
+        DatabaseHelper dbHelper = new DatabaseHelper(this.getApplicationContext());
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         Cursor cursor = db.query(dbHelper.TABLE_SCOREBOARD, new String[]{"score",
-                "level", "lives", "word"}, null, null, null, null, "score DESC", "6");
+                "level", "lives", "word"}, null, null, null, null, "score DESC", "10");
 
-        String[] items = new String[6];
+        String[] items = new String[11];
 
-        int i = 0;
+        int i = 1;
+
+        items[0] = "rank: score - word - tries";
 
         while (cursor.moveToNext()) {
-            items[i] = "" + (i+1) + ": " + cursor.getInt(0) + " - " + cursor.getString(3) + " - " + cursor.getInt(2);
+            items[i] = "" + i + ": " + cursor.getInt(0) + " - " + cursor.getString(3) + " - " + cursor.getInt(2);
             i++;
         }
 
+        if (cursor != null) {
 
-        ArrayAdapter<String> adapter =
-                new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
+            ArrayAdapter<String> adapter =
+                    new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
 
-        listview.setAdapter(adapter);
+            listview.setAdapter(adapter);
+        }
 
     }
 

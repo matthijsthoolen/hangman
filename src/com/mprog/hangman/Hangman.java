@@ -1,5 +1,6 @@
 package com.mprog.hangman;
 
+import android.content.Context;
 import android.util.Log;
 import com.mprog.hangman.database.DatabaseHelper;
 import com.mprog.hangman.database.Word;
@@ -22,11 +23,11 @@ public class Hangman {
     private static int status;
 
     HangmanDraw drawView;
-    Settings settings;
+    static Settings settings;
     static Scoreboard scoreboard;
     Word wordInfo;
 
-    public Hangman(HangmanDraw drawView2, Settings settings) {
+    public Hangman(HangmanDraw drawView2, Settings settings, Context context) {
          //At the moment everything will be set with the same Settings
         this.settings = settings;
         scoreboard = new Scoreboard();
@@ -35,12 +36,12 @@ public class Hangman {
         setLives(settings.get_tries());
         setTries(0);
         setStatus(0);
-        setupHangman(settings);
+        setupHangman(settings, context);
         drawView = drawView2;
     }
 
-    private void setupHangman(Settings settings) {
-        DatabaseHelper db = new DatabaseHelper(Launcher.mainContext);
+    private void setupHangman(Settings settings, Context context) {
+        DatabaseHelper db = new DatabaseHelper(context);
         if (checkDBQueue()) {
             wordInfo = db.getRandomWord(settings);
             Log.d("Hangman debug", "Choosen word: " + wordInfo.getWord());
@@ -97,16 +98,16 @@ public class Hangman {
             j++;
         }
 
+        if (getLives() == 0) {
+            setStatus(2);
+        }
+
         if (i == 0) {
             decreaseLives();
             increaseTries();
         } else {
             increaseTries();
             increaseScore(config.ORIGINAL_POINTS_GOODGUESS);
-        }
-
-        if (getLives() == 0) {
-            setStatus(2);
         }
 
         checkWon();

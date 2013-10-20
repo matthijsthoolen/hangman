@@ -28,42 +28,65 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/background_launcher.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/background_lost.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/background_won.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/hangman.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/hangman.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/hangman.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/hangman.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mprog/hangman/CustomSettings.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/backrepeat_launcher.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/backrepeat_lost.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/backrepeat_won.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mprog/hangman/config.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/customsettings.xml" />
-      <change type="DELETED" beforePath="E:\Programma's\Dropbox\Webdesign\Android native\hangman\res\drawable-hdpi\icon_preferences.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/background.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/background_gamescreen.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/background_gamescreen.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/background_launcher.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/background_lost.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/background_won.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/hangman0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/hangman0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/hangman1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/hangman1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/hangman10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/hangman10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/hangman11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/hangman11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/hangman12.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/hangman12.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/hangman13.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/hangman13.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/hangman2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/hangman2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/hangman3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/hangman3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/hangman4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/hangman4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/hangman5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/hangman5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/hangman6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/hangman6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/hangman7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/hangman7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/hangman8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/hangman8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/hangman9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/hangman9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/backrepeat_gamescreen.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/background.jpg" afterPath="$PROJECT_DIR$/res/drawable-hdpi/background.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/background_launcher.jpg" afterPath="$PROJECT_DIR$/res/drawable-hdpi/background_launcher.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/background_lost.jpg" afterPath="$PROJECT_DIR$/res/drawable-hdpi/background_lost.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/background_won.jpg" afterPath="$PROJECT_DIR$/res/drawable-hdpi/background_won.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mprog/hangman/CustomSettings.java" afterPath="$PROJECT_DIR$/src/com/mprog/hangman/CustomSettings.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mprog/hangman/database/DatabaseHelper.java" afterPath="$PROJECT_DIR$/src/com/mprog/hangman/database/DatabaseHelper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mprog/hangman/EndMessage.java" afterPath="$PROJECT_DIR$/src/com/mprog/hangman/EndMessage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mprog/hangman/Hangman.java" afterPath="$PROJECT_DIR$/src/com/mprog/hangman/Hangman.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mprog/hangman/HangmanDraw.java" afterPath="$PROJECT_DIR$/src/com/mprog/hangman/HangmanDraw.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mprog/hangman/Launcher.java" afterPath="$PROJECT_DIR$/src/com/mprog/hangman/Launcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mprog/hangman/OriginalMenu.java" afterPath="$PROJECT_DIR$/src/com/mprog/hangman/OriginalMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mprog/hangman/database/Scoreboard.java" afterPath="$PROJECT_DIR$/src/com/mprog/hangman/database/Scoreboard.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mprog/hangman/MainMenu.java" afterPath="$PROJECT_DIR$/src/com/mprog/hangman/MainMenu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mprog/hangman/ScoreboardView.java" afterPath="$PROJECT_DIR$/src/com/mprog/hangman/ScoreboardView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mprog/hangman/WordGenerator.java" afterPath="$PROJECT_DIR$/src/com/mprog/hangman/WordGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/raw/dutchwords.xml" afterPath="$PROJECT_DIR$/res/raw/dutchwords.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/launcher.xml" afterPath="$PROJECT_DIR$/res/layout/launcher.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/menu.xml" afterPath="$PROJECT_DIR$/res/layout/menu.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/scoreboard.xml" afterPath="$PROJECT_DIR$/res/layout/scoreboard.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mprog/hangman/config.java" afterPath="$PROJECT_DIR$/src/com/mprog/hangman/config.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/gamescreen.xml" afterPath="$PROJECT_DIR$/res/layout/gamescreen.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\Programma's\Dropbox\Webdesign\Android native\hangman\res\layout\endMessage.xml" afterPath="$PROJECT_DIR$/res/layout/endmessage.xml" />
-      <change type="MOVED" beforePath="E:\Programma's\Dropbox\Webdesign\Android native\hangman\src\com\mprog\hangman\database\Dictionary.java" afterPath="$PROJECT_DIR$/src/com/mprog/hangman/database/Word.java" />
       <change type="MOVED" beforePath="E:\Programma's\Dropbox\Webdesign\Android native\hangman\src\com\mprog\hangman\gameScreen.java" afterPath="$PROJECT_DIR$/src/com/mprog/hangman/GameScreen.java" />
     </list>
     <ignored path="Hangman.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382261326277" ignored="false" />
-    <file path="/fragment.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382266161661" ignored="false" />
+    <file path="/Dummy.txt" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382298113980" ignored="false" />
+    <file path="/fragment.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382280165610" ignored="false" />
     <file path="/MyActivity.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1380368783542" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382215706568" ignored="false" />
     <file path="/MainMenu.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1381847039110" ignored="false" />
@@ -78,20 +101,20 @@
     <file path="/originalmenu.xml" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1380383601389" ignored="false" />
     <file path="/scoreboard.xml" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382113419869" ignored="false" />
     <file path="/a.xml" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1381835660981" ignored="false" />
-    <file path="/Hangman.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382224367397" ignored="false" />
-    <file path="/HangmanDraw.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1380916582589" ignored="false" />
-    <file path="/GameScreen.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382274435590" ignored="false" />
-    <file path="/DatabaseHelper.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382264271381" ignored="false" />
+    <file path="/Hangman.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382298864275" ignored="false" />
+    <file path="/HangmanDraw.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382308575156" ignored="false" />
+    <file path="/GameScreen.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382301515311" ignored="false" />
+    <file path="/DatabaseHelper.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382281271341" ignored="false" />
     <file path="/menu.xml" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382214957211" ignored="false" />
     <file path="/StartDraw.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1380568816122" ignored="false" />
     <file path="/Won.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382113221409" ignored="false" />
     <file path="/Lost.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1380724844504" ignored="false" />
     <file path="/won.xml" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382113244550" ignored="false" />
     <file path="/Dictionary.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1380907132336" ignored="false" />
-    <file path="/WordGenerator.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382095227046" ignored="false" />
+    <file path="/WordGenerator.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382307946592" ignored="false" />
     <file path="/History.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1380879218295" ignored="false" />
-    <file path="/README.md" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1380922757003" ignored="false" />
-    <file path="/Launcher.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382224771609" ignored="false" />
+    <file path="/README.md" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382308729115" ignored="false" />
+    <file path="/Launcher.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382308674944" ignored="false" />
     <file path="/launcher.xml" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382220938991" ignored="false" />
     <file path="/basic.xml" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1381761545843" ignored="false" />
     <file path="/launcherInterface.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1381927441022" ignored="false" />
@@ -101,11 +124,11 @@
     <file path="/Preferences.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382107921893" ignored="false" />
     <file path="/settings.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382104061849" ignored="false" />
     <file path="/Settings.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382108134669" ignored="false" />
-    <file path="/ScoreboardView.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382276441678" ignored="false" />
+    <file path="/ScoreboardView.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382305372121" ignored="false" />
     <file path="/CustomSettings.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382214749208" ignored="false" />
     <file path="/CustomSettings.xml" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382207006782" ignored="false" />
     <file path="/customsettings.xml" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382209149456" ignored="false" />
-    <file path="/config.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382222411435" ignored="false" />
+    <file path="/config.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382309035042" ignored="false" />
     <file path="/PreferencePopup.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382213287761" ignored="false" />
     <file path="/setPreferencePopup.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382211499504" ignored="false" />
     <file path="/prefs.xml" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382214117803" ignored="false" />
@@ -113,8 +136,10 @@
     <file path="/backrepeat_launcher.xml" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382220025433" ignored="false" />
     <file path="/endmessage.xml" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382274072391" ignored="false" />
     <file path="/backrepeat_lost.xml" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382274121590" ignored="false" />
-    <file path="/EndMessage.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382275488519" ignored="false" />
+    <file path="/EndMessage.java" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382308944266" ignored="false" />
     <file path="/backrepeat_won.xml" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382275395254" ignored="false" />
+    <file path="/gamescreen.xml" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382285494272" ignored="false" />
+    <file path="/backrepeat_gamescreen.xml" changelist="b9c9b3a1-9b83-4be9-ad74-1a6bbac4b9f8" time="1382277308033" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,40 +205,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Hangman.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mprog/hangman/Hangman.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="88" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HangmanDraw.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="HangmanDraw.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mprog/hangman/HangmanDraw.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="26" selection-start="789" selection-end="789" vertical-scroll-proportion="0.494863">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="endmessage.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/endmessage.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="54" selection-start="310" selection-end="310" vertical-scroll-proportion="8.84">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EndMessage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mprog/hangman/EndMessage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="51" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.0">
+            <state line="24" column="28" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -221,19 +216,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="backrepeat_launcher.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/backrepeat_launcher.xml">
+      <file leaf-file-name="CustomSettings.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mprog/hangman/CustomSettings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="38" selection-start="0" selection-end="339" vertical-scroll-proportion="0.0">
+            <state line="46" column="96" selection-start="1525" selection-end="1525" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameScreen.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mprog/hangman/GameScreen.java">
+      <file leaf-file-name="DatabaseHelper.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/mprog/hangman/database/DatabaseHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="97" selection-start="3614" selection-end="3614" vertical-scroll-proportion="0.0">
+            <state line="27" column="40" selection-start="925" selection-end="925" vertical-scroll-proportion="0.52307695">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="84" column="102" selection-start="4460" selection-end="4460" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -250,6 +254,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitLogSettings">
+    <option name="myStructureFilterPaths" />
     <option name="myDateState">
       <MyDateState />
     </option>
@@ -257,22 +262,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/drawable-hdpi/backrepeat_launcher.xml" />
-        <option value="$PROJECT_DIR$/res/layout/launcher.xml" />
-        <option value="$PROJECT_DIR$/src/com/mprog/hangman/config.java" />
-        <option value="$PROJECT_DIR$/res/layout/scoreboard.xml" />
-        <option value="$PROJECT_DIR$/src/com/mprog/hangman/database/Scoreboard.java" />
-        <option value="$PROJECT_DIR$/src/com/mprog/hangman/Launcher.java" />
-        <option value="$PROJECT_DIR$/src/com/mprog/hangman/database/DatabaseHelper.java" />
-        <option value="$PROJECT_DIR$/src/com/mprog/hangman/HangmanDraw.java" />
-        <option value="$PROJECT_DIR$/src/com/mprog/hangman/HangmanTest.java" />
+        <option value="$PROJECT_DIR$/res/drawable-hdpi/backrepeat_gamescreen.xml" />
+        <option value="$PROJECT_DIR$/res/layout/gamescreen.xml" />
         <option value="$PROJECT_DIR$/src/com/mprog/hangman/Hangman.java" />
-        <option value="$PROJECT_DIR$/res/layout/endmessage.xml" />
-        <option value="$PROJECT_DIR$/res/drawable-hdpi/backrepeat_lost.xml" />
         <option value="$PROJECT_DIR$/src/com/mprog/hangman/GameScreen.java" />
-        <option value="$PROJECT_DIR$/res/drawable-hdpi/backrepeat_won.xml" />
-        <option value="$PROJECT_DIR$/src/com/mprog/hangman/EndMessage.java" />
+        <option value="$PROJECT_DIR$/res/layout/main.xml" />
+        <option value="$PROJECT_DIR$/src/com/mprog/hangman/MainMenu.java" />
+        <option value="$PROJECT_DIR$/res/layout/scoreboard.xml" />
         <option value="$PROJECT_DIR$/src/com/mprog/hangman/ScoreboardView.java" />
+        <option value="$PROJECT_DIR$/src/com/mprog/hangman/database/DatabaseHelper.java" />
+        <option value="$PROJECT_DIR$/src/com/mprog/hangman/WordGenerator.java" />
+        <option value="$PROJECT_DIR$/src/com/mprog/hangman/HangmanDraw.java" />
+        <option value="$PROJECT_DIR$/src/com/mprog/hangman/Launcher.java" />
+        <option value="$PROJECT_DIR$/src/com/mprog/hangman/EndMessage.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/com/mprog/hangman/CustomSettings.java" />
+        <option value="$PROJECT_DIR$/src/com/mprog/hangman/config.java" />
       </list>
     </option>
   </component>
@@ -312,7 +317,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -384,28 +388,6 @@
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hangman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hangman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="raw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -425,58 +407,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hangman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hangman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hangman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hangman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-hdpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hangman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hangman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -489,7 +422,7 @@
     <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="reference.projectsettings.compiler.rmicompiler" />
     <property name="AndroidLayoutSelectedEditor" value="text-editor" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="4df1b6f329169f7b" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
     <property name="DEBUGGABLE_DEVICE" value="4df1b6f329169f7b" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="DEBUGGABLE_PROCESS" value="com.mprog.hangman" />
@@ -504,26 +437,27 @@
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.mprog.hangman" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Programma's\Dropbox\Webdesign\Android native\hangman\res\drawable-mdpi" />
       <recent name="E:\Programma's\Dropbox\Webdesign\Android native\hangman\res\drawable-hdpi" />
       <recent name="E:\Programma's\Dropbox\Webdesign\Android native\hangman\res\drawable-xxhdpi" />
       <recent name="E:\Programma's\Dropbox\Webdesign\Android native\hangman\res\drawable-xhdpi" />
-      <recent name="E:\Programma's\Dropbox\Webdesign\Android native\hangman\res\drawable-mdpi" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.mprog.hangman" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Programma's\Dropbox\Webdesign\Android native\hangman\res\drawable-hdpi" />
+      <recent name="E:\Programma's\Dropbox\Webdesign\Android native\hangman\res\drawable-mdpi" />
       <recent name="E:\Programma's\Dropbox\Webdesign\Android native\hangman\res\raw" />
       <recent name="E:\Programma's\Dropbox\Webdesign\Android native\hangman\src\com\mprog\hangman\dictionary" />
       <recent name="E:\Programma's\Dropbox\Webdesign\Android native\hangman\src\com\mprog\hangman" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.mprog.hangman" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.hangman">
@@ -693,7 +627,7 @@
       <option name="ACTIVITY_CLASS" value="com.mprog.hangman.MyActivity" />
       <option name="MODE" value="specific_activity" />
       <option name="DEPLOY" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="USB_DEVICE" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="PREFERRED_AVD" value="" />
       <option name="USE_COMMAND_LINE" value="true" />
       <option name="COMMAND_LINE" value="" />
@@ -770,20 +704,20 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.6718576" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39933258" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32035595" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3214683" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32035595" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.676307" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.676307" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15955175" sideWeight="0.6785317" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15955175" sideWeight="0.67964405" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32369298" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924226" sideWeight="0.6785317" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924226" sideWeight="0.676307" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924226" sideWeight="0.6785317" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924226" sideWeight="0.676307" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -855,125 +789,125 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/layout/launcher.xml">
+    <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-16/android/util/Log.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="101" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/scoreboard.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="57" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mprog/hangman/config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="70" selection-start="921" selection-end="921" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mprog/hangman/database/Scoreboard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="91" selection-start="739" selection-end="739" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mprog/hangman/Launcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="102" selection-start="3118" selection-end="3118" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/raw/dutchwords.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="392" column="33" selection-start="9314" selection-end="9314" vertical-scroll-proportion="-8.8">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mprog/hangman/database/DatabaseHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="185" column="78" selection-start="6416" selection-end="6416" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/backrepeat_lost.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="97" selection-start="0" selection-end="335" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/backrepeat_won.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="41" selection-start="152" selection-end="152" vertical-scroll-proportion="0.11643836">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mprog/hangman/Hangman.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="88" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/endmessage.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="54" selection-start="310" selection-end="310" vertical-scroll-proportion="8.84">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mprog/hangman/EndMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="51" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mprog/hangman/ScoreboardView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="77" selection-start="1017" selection-end="1017" vertical-scroll-proportion="0.69863015">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/backrepeat_launcher.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="38" selection-start="0" selection-end="339" vertical-scroll-proportion="0.0">
+        <state line="52" column="19" selection-start="1966" selection-end="1991" vertical-scroll-proportion="0.33333334">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mprog/hangman/GameScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="97" selection-start="3614" selection-end="3614" vertical-scroll-proportion="0.0">
+        <state line="99" column="93" selection-start="3219" selection-end="3219" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mprog/hangman/Hangman.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="52" selection-start="2706" selection-end="2706" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/scoreboard.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="68" selection-start="338" selection-end="584" vertical-scroll-proportion="-4.76">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/gamescreen.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="38" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.54464287">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mprog/hangman/ScoreboardView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="37" selection-start="1346" selection-end="1346" vertical-scroll-proportion="0.9880342">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mprog/hangman/Launcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="183" column="54" selection-start="5920" selection-end="5920" vertical-scroll-proportion="4.417094">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mprog/hangman/EndMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="60" selection-start="768" selection-end="768" vertical-scroll-proportion="0.52307695">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="1" selection-start="896" selection-end="1214" vertical-scroll-proportion="0.66785717">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mprog/hangman/MainMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="73" selection-start="256" selection-end="256" vertical-scroll-proportion="0.11623932">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mprog/hangman/WordGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="113" column="17" selection-start="3178" selection-end="3178" vertical-scroll-proportion="1.6564102">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mprog/hangman/HangmanDraw.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="26" selection-start="789" selection-end="789" vertical-scroll-proportion="0.494863">
+        <state line="24" column="28" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mprog/hangman/config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="72" selection-start="104" selection-end="104" vertical-scroll-proportion="0.08717949">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mprog/hangman/CustomSettings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="96" selection-start="1525" selection-end="1525" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="102" selection-start="4460" selection-end="4460" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mprog/hangman/database/DatabaseHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="40" selection-start="925" selection-end="925" vertical-scroll-proportion="0.52307695">
           <folding />
         </state>
       </provider>

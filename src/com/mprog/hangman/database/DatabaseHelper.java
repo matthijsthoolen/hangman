@@ -25,7 +25,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static int asyncQueue = 0;
 
     public DatabaseHelper(Context context) {
-        super(context, DATABASE, null, 25);
+        super(context, DATABASE, null, 1);
         contextSave = context;
     }
 
@@ -198,7 +198,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 else db = this.getWritableDatabase();
             } catch (NullPointerException e) {
                 Log.e("Hangman","catched NullPointerException @ addWord");
-                DatabaseHelper dbHelp = new DatabaseHelper(Launcher.mainContext);
+                DatabaseHelper dbHelp = new DatabaseHelper(contextSave);
 
                 if (sort.equals("readable"))db = dbHelp.getReadableDatabase();
                 else db = dbHelp.getWritableDatabase();

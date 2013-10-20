@@ -25,10 +25,10 @@ public class MainMenu extends Activity {
                 Intent nextScreen = new Intent(getApplicationContext(), OriginalMenu.class);
                 startActivity(nextScreen);
                 break;
-            case R.id.arcadeMenu:
-                nextScreen = new Intent(getApplicationContext(), ArcadeMenu.class);
-                startActivity(nextScreen);
-                break;
+//            case R.id.arcadeMenu:
+//                nextScreen = new Intent(getApplicationContext(), ArcadeMenu.class);
+//                startActivity(nextScreen);
+//                break;
             case R.id.scoreboard:
                 nextScreen = new Intent(getApplicationContext(), ScoreboardView.class);
                 startActivity(nextScreen);
